@@ -1,7 +1,14 @@
 #!/bin/sh
 
-#DESTDIR=/usr/local
-DESTDIR=/u1/uaf/kshedstrom/python
+# invoke with 
+#
+#  ./install_pyroms.sh [DESTDIR]
+# 
+# for example:
+#
+#  ./install_pyroms.sh /u1/uaf/kshedstrom/
+
+DESTDIR=${1-/usr/local}
 CURDIR=`pwd`
 export CPPFLAGS=-I$DESTDIR/include
 export LDFLAGS='-L$DESTDIR/lib'
